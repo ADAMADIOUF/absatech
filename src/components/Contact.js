@@ -1,13 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 import a from "../assets/contact1.png"
 const Contact = () => {
-  const[name,setName]=useState("")
-  const [email, setEmail] = useState('')
-  const [subject, setSubject] = useState('')
-  const [message, setMessage] = useState('')
-
-console.log(name,email,subject,message);
-
   return (
     <div className='contact section-center'>
       <div className='title contact-title'>
@@ -27,15 +20,11 @@ console.log(name,email,subject,message);
       </div>
       <div className='contact-container'>
         <article>
-          <form className='form' name='contact' method='POST' data-netlify="true">
-            <input type='hidden' name='form-name' value="contact"/>
+          <form className='form'>
             <div className='contact-container'>
               <div>
                 <input
                   type='text'
-                  id='name'
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
                   className='input-contact'
                   placeholder='your name'
                 />
@@ -43,9 +32,6 @@ console.log(name,email,subject,message);
               <div>
                 <input
                   type='email'
-                  id='email'
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                   className='input-contact'
                   placeholder='your email'
                 />
@@ -54,9 +40,6 @@ console.log(name,email,subject,message);
             <div>
               <input
                 type='text'
-                id='subject'
-                value={subject}
-                onChange={(e) => setSubject(e.target.value)}
                 className='input-contact'
                 placeholder=' subject'
               />
@@ -64,14 +47,11 @@ console.log(name,email,subject,message);
             <div>
               <input
                 type='text'
-                id='message'
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
                 className='input-contact input-message'
                 placeholder='message'
               />
             </div>
-            <button type='submit' className='btn btn-contact input-contact'>
+            <button className='btn btn-contact input-contact'>
               send message
             </button>
           </form>
