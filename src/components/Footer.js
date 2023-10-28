@@ -101,11 +101,11 @@ const Footer = () => {
             <div className='col-md-6 text-center text-md-start mb-3 mb-md-0'>
               &copy;{' '}
               <a className='border-bottom' href='#'>
-                Your Site Name
+                absatech
               </a>
               , All Right Reserved. Designed By{' '}
               <a className='border-bottom' href='https://htmlcodex.com'>
-                HTML Codex
+                absatech.com
               </a>
             </div>
           </div>
