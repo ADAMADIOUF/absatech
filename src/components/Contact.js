@@ -1,6 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import a from "../assets/contact1.png"
 const Contact = () => {
+  const[name,setName]=useState("")
+  const [email, setEmail] = useState('')
+  const [subject, setSubject] = useState('')
+  const [message, setMessage] = useState('')
+
+console.log(name,email,subject,message);
+
   return (
     <div className='contact section-center'>
       <div className='title contact-title'>
@@ -20,11 +27,15 @@ const Contact = () => {
       </div>
       <div className='contact-container'>
         <article>
-          <form className='form'>
+          <form className='form' name='contact' method='POST' data-netlify="true">
+            <input type='hidden' name='form-name' value="contact"/>
             <div className='contact-container'>
               <div>
                 <input
                   type='text'
+                  id='name'
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   className='input-contact'
                   placeholder='your name'
                 />
@@ -32,6 +43,9 @@ const Contact = () => {
               <div>
                 <input
                   type='email'
+                  id='email'
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className='input-contact'
                   placeholder='your email'
                 />
@@ -40,6 +54,9 @@ const Contact = () => {
             <div>
               <input
                 type='text'
+                id='subject'
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
                 className='input-contact'
                 placeholder=' subject'
               />
@@ -47,11 +64,14 @@ const Contact = () => {
             <div>
               <input
                 type='text'
+                id='message'
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
                 className='input-contact input-message'
                 placeholder='message'
               />
             </div>
-            <button className='btn btn-contact input-contact'>
+            <button type='submit' className='btn btn-contact input-contact'>
               send message
             </button>
           </form>
