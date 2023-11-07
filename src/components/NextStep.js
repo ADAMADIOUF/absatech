@@ -2,6 +2,7 @@ import React from 'react'
 import a from "../assets/service.png"
 import b from '../assets/contact.png'
 import c from '../assets/dev.png'
+import { Link } from 'react-router-dom'
 
 
 const NextStep = () => {
@@ -24,7 +25,9 @@ const NextStep = () => {
             email marketing, and more. Find out how we can help your business
             thrive.
           </p>
-          <button className='btn'>services</button>
+          <button className='btn'>
+            <Link to={`/services`}>services</Link>
+          </button>
         </div>
         <div className='next-step-option'>
           <img src={b} alt='' className='next-step-img' />
@@ -33,7 +36,9 @@ const NextStep = () => {
             Have questions or need personalized guidance? Reach out to our
             expert team. We're here to assist you every step of the way.
           </p>
-          <button className='btn'>contact us</button>
+          <button className='btn'>
+            <Link to={`/contact`}>contact us</Link>
+          </button>
         </div>
         <div className='next-step-option'>
           <img src={c} alt='' className='next-step-img' />
@@ -42,7 +47,12 @@ const NextStep = () => {
             Ready to take action? Let's begin the journey of transforming your
             business. Get in touch with us and start achieving your goals.
           </p>
-          <button className='btn'>get started</button>
+          <button
+            className='btn'
+            onClick={() => (window.location = 'tel:+17015003259')}
+          >
+            get started
+          </button>
         </div>
       </div>
     </div>

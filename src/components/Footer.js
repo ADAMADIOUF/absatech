@@ -13,19 +13,19 @@ const Footer = () => {
               <span>
                 <FaMapMarkerAlt />
               </span>
-              123 Street, New York, USA
+              1101 32ND AVE SW ,Minot,ND,58701
             </p>
             <p>
               <span>
                 <FaPhoneAlt />
               </span>
-              +012 345 67890
+              +17015003259
             </p>
             <p>
               <span>
                 <FaEnvelope />
               </span>
-              info@example.com
+             absatech.com
             </p>
             <div className='footer-links'>
               <a className='btn btn-outline-light btn-social' href=''>
@@ -104,7 +104,7 @@ const Footer = () => {
                 absatech
               </a>
               , All Right Reserved. Designed By{' '}
-              <a className='border-bottom' href='https://htmlcodex.com'>
+              <a className='border-bottom' href='https://absatech.com'>
                 absatech.com
               </a>
             </div>

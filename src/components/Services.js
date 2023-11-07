@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {
   FaBullhorn,
   FaDesktop,
@@ -16,6 +16,12 @@ import {
 } from 'react-icons/fa'
 
 function Services() {
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }, [])
   return (
     <div className='services section-center' id='services'>
       <div className='title'>

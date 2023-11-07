@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Babylonica&family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,700&family=Calligraffitti&family=Cinzel&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Fauna+One&family=Henny+Penny&family=Lato:wght@100;300;400&family=League+Spartan:wght@200;300;400;500&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@100;200;300;400&family=Nunito:wght@200;400&family=Poppins:wght@100;200;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500;700&family=Lato:wght@100;300;700&family=Merriweather:wght@300;700&family=Montserrat:wght@100;200;700&family=Open+Sans:wght@300;700&family=Playfair+Display:wght@400;500;700&family=Roboto:wght@100;300;700&family=Source+Code+Pro:wght@200;300;500;700&display=swap');
 :root {
   --clr-primary-1: #F5F5EF;
   --clr-primary-2: #013789;
@@ -6,26 +6,14 @@
   --clr-primary-3: #dca454;
   --clr-primary-4: #ebeced65;
   --clr-primary-5: #e8e5e5;
-   --primary-font1: 'Lato', sans-serif;
-  --primary-font2: 'Merriweather', serif;
-  --primary-font3: 'Montserrat' sans-serif;
-  --primary-font4: 'Oswald', sans-serif;
-  --primary-font5: 'Playfair Display', serif;
-  --primary-font6: 'Raleway', sans-serif;
-  --primary-font7: 'Rubik Microbe', cursive;
-  --primary-font8: 'Rubik Moonrocks', cursive;
-  --primary-font9: 'Anton', sans-serif;
-  --primary-font10: 'Babylonica', cursive;
-  --primary-font11: 'Bodoni Moda', serif;
-  --primary-font12:  'Calligraffitti', cursive;
-  --primary-font13: 'EB Garamond', serif;
-  --primary-font14:'Henny Penny', cursive;
-  --primary-font15:'League Spartan', sans-serif;
-  --primary-font16:'Libre Baskerville', serif;
-  --primary-font17:'Nunito', sans-serif;
-  --primary-font18:'Poppins', sans-serif;
-  --primary-font19: 'Cinzel', serif;
-  --primary-font20: 'Fauna One', serif;
+   --primary-font1: 'Fira Code', monospace;
+  --primary-font2: 'Lato', sans-serif;
+  --primary-font3: 'Merriweather', serif;
+  --primary-font4: 'Montserrat', sans-serif;
+  --primary-font5: 'Open Sans', sans-serif;
+  --primary-font6: 'Playfair Display', serif;
+  --primary-font7: 'Roboto', sans-serif;
+  --primary-font8: 'Source Code Pro', monospace;
   --clr-black: #000000;
   --clr-white: #fff;
   --transition: all 0.3s linear;
@@ -51,7 +39,7 @@ Global Styles
   box-sizing: border-box;
 }
 body {
-  font-family: var(--primary-font3);
+  font-family: var(--primary-font1);
   background:var(--clr-white);
   color: var(--clr-black);
   line-height: 1.5;
@@ -62,6 +50,7 @@ ul {
 }
 a {
   text-decoration: none;
+ color: var(--clr-white); 
 }
 hr {
   border: none;
@@ -244,7 +233,7 @@ text-transform: uppercase;
   margin-top: 2rem;
   }
   .nav-links .nav-item a:hover{
-    background-color: var(--clr-primary-4);
+    background-color: var(--clr-primary-3);
   }
   .nav-links.active {
     display: flex;
@@ -283,7 +272,7 @@ text-transform: uppercase;
     font-size: 1.5rem;
   }
   .nav-links .nav-item a:hover{
-    background-color: var(--clr-primary-4);
+    color: var(--clr-primary-3);
   }
 }
 
@@ -356,6 +345,45 @@ text-transform: uppercase;
     font-size: 1.5rem;
   }
 }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
+
+.typing-animation {
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes backAndForth {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px); /* Adjust the value to control the distance */
+  }
+}
+
+.back-and-forth {
+  display: inline-block; /* Allows transform to work */
+  animation: backAndForth 2s ease-in-out infinite;
+}
+
+/* Ensure the rest of your styles are included here */
+
+
 /* FirstBanner */
 .first-banner{
   padding: 1rem;
@@ -378,6 +406,42 @@ text-transform: uppercase;
     justify-content: space-between;
     align-items: center;
   }
+}
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.text-scrolling {
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.text-scrolling .banner-text {
+  display: inline-block;
+  padding-left: 100%; /* Start offscreen to the right */
+  animation: scroll-left 15s linear infinite;
+}
+
+.first-banner {
+  /* Add your styling for the banner here */
+}
+
+.first-banner-details {
+  /* Add your styling for the banner details here */
+}
+
+.first-banner-btn {
+  /* Add your styling for the button here */
+}
+
+.happy-to-help span{
+  color: var(--clr-primary-3);
 }
 /* SecondBanner */
 .second-banner-content{
@@ -718,32 +782,27 @@ border-radius: var(--radius);
 .contact img{
   width: 100%;
 }
+.form input{
+  padding: 0.75rem;
+  margin: 1.5rem;
+  border: none;
+  background-color: #ccc;
+  outline: none;
+  width: 100%;
+}
+.form textarea{
+  width: 100%;
+  padding: 2rem;
+  border: none;
+  background-color: #ccc;
+  outline: none;
+}
 .contact-title p{
   max-width: 45rem;
   margin: 2rem auto;
   font-size: 1.5rem;
 }
- .input-contact{
-  width: 100%;
-  padding: 0.75rem;
-  margin-top: 1rem;
-  border-radius: 2rem;
-  outline: none;
-}
-.input-contact::placeholder{
-  color: var(--clr-primary-3);
-  text-transform: uppercase;
-}
-.input-message{
-  padding-top:5rem ;
-}
-.contact-details p{
-  font-size: 1.5rem;
-}
-.contact-details h6{
-  font-size: 1.5rem;
-  font-weight: 100px;
-}
+ 
 @media (min-width:992px) {
   .contact-container{
  display: grid;

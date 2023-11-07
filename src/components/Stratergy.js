@@ -39,7 +39,13 @@ const Stratergy = () => {
       </div>
       <div className='container-strategy'>
         <article className='strategy-first-content'>
-          <button className='btn'>schedule consultation</button>
+          <button
+            className='btn'
+            onClick={() => (window.location = 'tel:+17015003259')}
+          >
+            Schedule Consultation
+          </button>
+
           <div className='strategy-content-two'>
             <img src={a} alt='' />
           </div>

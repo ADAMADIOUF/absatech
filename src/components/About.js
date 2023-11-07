@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import SecondBanner from './SecondBanner'
 import Percentage from './Percentage'
 import a from '../assets/about.png'
 import AboutProgressBar from './AboutProgreesBar'
-
+import b from '../assets/a6.png'
+import { Parallax } from 'react-parallax'
 const About = () => {
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth',
+    })
+  }, [])
   return (
     <div className='about section-center'>
       <SecondBanner />
+      <div>
+        <Parallax bgImage={b} strength={500}>
+          <div style={{ height: 1000 }}></div>
+        </Parallax>
+      </div>
       <div className='about-container'>
         <article className='about-details'>
           <h3>#1 Digital solution with 3 years of experience</h3>
@@ -26,7 +38,7 @@ const About = () => {
           <img src={a} alt='' />
         </article>
       </div>
-      <AboutProgressBar/>
+      <AboutProgressBar />
     </div>
   )
 }

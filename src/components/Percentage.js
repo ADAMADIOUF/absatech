@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import CountUp from 'react-countup'
+import { Link } from 'react-router-dom'
 import ScrollTrigger from 'react-scroll-trigger'
 
 
@@ -45,7 +46,9 @@ const ProgressBar = () => {
             <span>Design & Development</span>
             <div className={`progress bg3 ${count ? 'animate' : ''}`}></div>
           </article>
-          <button className='btn btn-about'>contact us</button>
+          <button className='btn btn-about'>
+            <Link to={`/contact`}>contact us</Link>
+          </button>
         </div>
       </ScrollTrigger>
     </section>

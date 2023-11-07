@@ -6,17 +6,23 @@ import ThirdBanner from './ThirdBanner'
 import FirstTestimonial from './FirstTestimonial'
 import Stratergy from './Stratergy'
 import NextStep from './NextStep'
-
+import b from '../assets/a5.png'
+import { Parallax } from 'react-parallax'
 const Home = () => {
   return (
     <div>
-      <Header/>
-      <FirstBanner/>
-      <SecondBanner/>
-      <ThirdBanner/>
-      <FirstTestimonial/>
-      <Stratergy/>
-      <NextStep/>
+      <Header />
+      <FirstBanner />
+      <div>
+        <Parallax bgImage={b} strength={500}>
+          <div style={{ height: 1000 }}></div>
+        </Parallax>
+      </div>
+      <SecondBanner />
+      <ThirdBanner />
+      <FirstTestimonial />
+      <Stratergy />
+      <NextStep />
     </div>
   )
 }

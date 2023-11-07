@@ -4,17 +4,19 @@ const FirstBanner = () => {
   return (
     <div className='first-banner'>
       <div className='first-banner-details section-center'>
-        <article>
-          <h3>Complimentary Guide</h3>
-          <h2>Access Your Marketing Automation Guide</h2>
-        </article>
+        <h3 className='happy-to-help'>absa tech <span>happy to help</span></h3>
+        <div className='text-scrolling'>
+          <article className='banner-text'>
+            <h3>Transform Your Online Presence</h3>
+            <h2>Expert Web Development Tailored for Your Business</h2>
+          </article>
+        </div>
         <article>
           <button className='btn first-banner-btn'>
-            Access Automation Guide
+            Discover Our Solutions
           </button>
         </article>
       </div>
-      
     </div>
   )
 }
