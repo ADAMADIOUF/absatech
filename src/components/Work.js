@@ -11,6 +11,8 @@ import i from '../assets/p9.png'
 import j from '../assets/p10.png'
 import k from '../assets/p11.png'
 import l from '../assets/p12.png'
+import m from '../assets/p13.png'
+
 
 
 
@@ -60,6 +62,9 @@ const Work = () => {
         </article>
         <article className='work-content'>
           <img src={l} alt='' />
+        </article>
+        <article className='work-content'>
+          <img src={m} alt='' />
         </article>
       </div>
     </div>
